@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "5fca90e7-e809-4f82-8bd3-144797c8c3bc",
+		"name": "Rocketfy Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18094639"
+	},
+	"item": [
+		{
+			"name": "GET ALL PRODUCTS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/dev/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dev",
+						"products"
+					],
+					"query": [
+						{
+							"key": "per_page",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "1000",
+							"disabled": true
+						},
+						{
+							"key": "tags[0]",
+							"value": "Tenis",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Force",
+							"disabled": true
+						},
+						{
+							"key": "sku",
+							"value": "NIKE-AIR-FORCE-1",
+							"disabled": true
+						},
+						{
+							"key": "quantity",
+							"value": "10",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE PRODUCT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Air Force 1\",\r\n    \"description\": \"Tenis Air Force 3\",\r\n    \"sku\": \"NIKE-AIR-FORCE-3\",\r\n    \"image_url\": \"https://cdn-images.farfetch-contents.com/12/75/87/90/12758790_12647785_600.jpg\",\r\n    \"price\": 1000,\r\n    \"tags\": [\"Tenis\", \"Nike\"],\r\n    \"quantity\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/dev/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dev",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE PRODUCT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Air Force 1\",\r\n    \"description\": \"Tenis Air Force 1\",\r\n    \"image_url\": \"https://cdn-images.farfetch-contents.com/12/75/87/90/12758790_12647785_600.jpg\",\r\n    \"price\": 5000,\r\n    \"tags\": [\"Gomas\", \"Nike\"],\r\n    \"quantity\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/dev/products/651741a43f12f6e4b76011cd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dev",
+						"products",
+						"651741a43f12f6e4b76011cd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE PRODUCT",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Air Force 1\",\r\n    \"description\": \"Tenis Air Force 1\",\r\n    \"image_url\": \"https://cdn-images.farfetch-contents.com/12/75/87/90/12758790_12647785_600.jpg\",\r\n    \"price\": 5000,\r\n    \"tags\": [\"Gomas\", \"Nike\"],\r\n    \"quantity\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/dev/products/65173575735f5b0b20521992",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dev",
+						"products",
+						"65173575735f5b0b20521992"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PRODUCT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/dev/products/651739f41e47eb53436eb8ea",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dev",
+						"products",
+						"651739f41e47eb53436eb8ea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PRODUCT CHANGE HISTORIES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/dev/products/651741a43f12f6e4b76011cd/product-change-histories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dev",
+						"products",
+						"651741a43f12f6e4b76011cd",
+						"product-change-histories"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
